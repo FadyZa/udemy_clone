@@ -17,7 +17,7 @@ export default function Courses() {
     const [max, setMax] = useState(88888888888);
 
     useEffect(() => {
-        axios.get("../../dataset_udemy-courses.json")
+        axios.get("/dataset_udemy-courses.json")
             .then((res) => {
 
                 console.log(res.data);

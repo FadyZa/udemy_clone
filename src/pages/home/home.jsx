@@ -1,9 +1,8 @@
 import { Fragment } from "react";
-import Courses from "../../components/courses";
 import Carousel from "../../components/carousel/carousel";
 import Topics from "../../components/topics";
 import { Btn } from "../../components/btn";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CardCourseComponent from "../../components/coursesCard";
 
 import axios from "axios";
@@ -13,7 +12,7 @@ export function HomePage() {
 
   useEffect(() => {
     axios
-      .get("../../../dataset_udemy-courses.json") // Fetch data from the API
+      .get("/dataset_udemy-courses.json") // Fetch data from the API
       .then((res) => {
         const lengthh = res.data;
         lengthh.length = 8;
@@ -100,7 +99,7 @@ export function HomePage() {
       <div className="bg-white d-flex justify-content-center align-items-center gap-5 py-5 flex-wrap">
         <img
           style={{ maxWidth: "300px" }}
-          src="../../../public/instructor.jpg"
+          src="/instructor.jpg"
         />
         <div className="col-12 col-md-4 text-center text-md-start p-3">
           <h3 className="fs-1 fw-bold">Become an instructor</h3>
